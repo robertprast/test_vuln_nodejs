@@ -13,6 +13,10 @@ app.get("/test2", function (req, res) {
   let str = "<html>test " + req.query.test;
   res.send(str);
 });
+
+console.log("code flow messup")
+
+
 app.get("/test4", function (req, res) {
   res.send(eval(req.query.test));
 });
