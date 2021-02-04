@@ -2,8 +2,10 @@ var express = require("express");
 var app = express();
 
 app.get("/", function (req, res) {
-  let test = [req.query.tes];
-  res.send(eval(test[0]));
+  let test = [req.query.test];
+  let str= "<html>test "+req.query.test
+  res.send(str)
+//   res.send(eval(test[0]));
   console.log(req.query.test);
   //   res.send("HI")
 });
