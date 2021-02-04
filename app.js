@@ -11,19 +11,19 @@ app.get("/2", function (req, res) {
   res.send(str);
 });
 
-app.get("/", function (req, res) {
-  let str = "<html>test " + req.query.test;
-  res.send(str);
-});
+// app.get("/", function (req, res) {
+//   let str = "<html>test " + req.query.test;
+//   res.send(str);
+// });
 
-function random(a) {
-  return btoa(a);
-}
+// function random(a) {
+//   return btoa(a);
+// }
 
-app.get("/3", function (req, res) {
-  let str = "<html>test " + random(req.query.test);
-  res.send(str);
-});
+// app.get("/3", function (req, res) {
+//   let str = "<html>test " + random(req.query.test);
+//   res.send(str);
+// });
 
 app.listen(8080, function () {
   console.log("Example app listening on port 8080!");
