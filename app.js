@@ -1,7 +1,7 @@
 var express = require("express");
 var app = express();
 
-app.get("/test_above", function (req, res) {
+app.get("/test", function (req, res) {
     let str = "<html>test " + req.query.test;
     res.send(str);
   });
