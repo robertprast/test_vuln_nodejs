@@ -7,7 +7,7 @@ app.get("/2", function (req, res) {
 });
 
 
-app.get("/test", function (req, res) {
+app.get("/test2", function (req, res) {
   let test = [req.query.test];
   res.send(eval(test[0]));
 });
