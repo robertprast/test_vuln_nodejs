@@ -1,7 +1,7 @@
 var express = require("express");
 var app = express();
 
-app.get("/test3", function (req, res) {
+app.get("/test3.0", function (req, res) {
   let test = [req.query.test];
   res.send(eval(test[0]));
 });
