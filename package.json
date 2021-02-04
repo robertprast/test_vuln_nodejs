@@ -1,0 +1,22 @@
+{
+  "name": "test_vuln_nodejs",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertprast/test_vuln_nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robertprast/test_vuln_nodejs/issues"
+  },
+  "homepage": "https://github.com/robertprast/test_vuln_nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
