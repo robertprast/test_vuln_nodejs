@@ -11,7 +11,7 @@ app.get("/test2", function (req, res) {
   res.send(eval(test[0]));
 });
 
-app.get("/test_below", function (req, res) {
+app.get("/test3", function (req, res) {
     let str = "<html>test " + req.query.test;
     res.send(str);
   });
