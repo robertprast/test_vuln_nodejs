@@ -2,21 +2,19 @@ var express = require("express");
 var app = express();
 
 app.get("/test1", function (req, res) {
-    let str = "<html>test " + req.query.test;
-    res.send(str);
-  });
-  
+  let str = "<html>test " + req.query.test;
+  res.send(str);
+});
+
 app.get("/test2", function (req, res) {
-  let test = [req.query.test];
-  res.send(eval(test[0]));
+  let str = "<html>test " + req.query.test;
+  res.send(str);
 });
 
 app.get("/test3", function (req, res) {
-    let str = "<html>test " + req.query.test;
-    res.send(str);
-  });
-  
-
+  let test = [req.query.test];
+  res.send(eval(test[0]));
+});
 
 // app.get("/", function (req, res) {
 //   let str = "<html>test " + req.query.test;
