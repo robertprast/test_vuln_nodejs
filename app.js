@@ -1,14 +1,25 @@
 var express = require("express");
 var app = express();
 
-app.get("/", function (req, res) {
+app.get("/1", function (req, res) {
   let test = [req.query.test];
-  let str= "<html>test "+req.query.test
-  res.send(str)
-//   res.send(eval(test[0]));
-  console.log(req.query.test);
-  //   res.send("HI")
+  res.send(eval(test[0]));
 });
+
+app.get("/2", function (req, res) {
+  let str = "<html>test " + req.query.test;
+  res.send(str);
+});
+
+
+function random(a){
+    return btoa(a)
+}
+
+app.get("/3", function (req, res) {
+    let str = "<html>test " + random(req.query.test);
+    res.send(str);
+  });
 
 app.listen(8080, function () {
   console.log("Example app listening on port 8080!");
