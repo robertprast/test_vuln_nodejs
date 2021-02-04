@@ -10,7 +10,7 @@ app.get("/test3", function (req, res) {
   res.send(eval(test[0]));
 });
 app.get("/test1", function (req, res) {
-  let str = "<html>test " + req.query.test;
+  let str = "<html>testasdas" + req.query.test;
   res.send(str);
 });
 
