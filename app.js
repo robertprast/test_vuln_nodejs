@@ -95,7 +95,6 @@ app.get("/test2c", function (req, res) {
   let str = req.query.test;
   fs.open(str, "w", function (err, file) {
     if (err) throw err;
-    console.log("Saved!");
   });
 });
 
