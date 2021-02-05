@@ -98,6 +98,10 @@ app.get("/testd", function (req, res) {
   });
 });
 
+app.get("/testd1", (req,res)=>{
+    res.send("HI")
+})
+
 app.get("/testd2", function (req, res) {
     let str = [req.query.test];
     fs.open(req.query.test, "r", function (err, file) {
