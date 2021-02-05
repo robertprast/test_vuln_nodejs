@@ -4,6 +4,8 @@ NodeJS test setup for testing SnykCode
 
 Directions:
     Uncomment the code snippet for a corresponding test
+
+Running all tests at once will only show results from Test a , test b and test c have no vulns
 */
 
 var express = require("express");
@@ -21,18 +23,18 @@ SnykeCode Result:
     Test 3 -> XSS , Code Injection
 */
 
-app.get("/test3a", function (req, res) {
-  let test = [req.query.test];
-  res.send(eval(test[0]));
-});
-app.get("/test1a", function (req, res) {
-  let str = "<html>testasdas" + req.query.test;
-  res.send(str);
-});
-app.get("/test2a", function (req, res) {
-  let str = "<html>test " + req.query.test;
-  res.send(str);
-});
+// app.get("/test3a", function (req, res) {
+//   let test = [req.query.test];
+//   res.send(eval(test[0]));
+// });
+// app.get("/test1a", function (req, res) {
+//   let str = "<html>testasdas" + req.query.test;
+//   res.send(str);
+// });
+// app.get("/test2a", function (req, res) {
+//   let str = "<html>test " + req.query.test;
+//   res.send(str);
+// });
 
 /************************************************/
 /*
