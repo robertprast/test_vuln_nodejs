@@ -17,18 +17,18 @@ SnykeCode Result:
     Test 3 -> XSS , Code Injection
 */
 
-app.get("/test3", function (req, res) {
-  let test = [req.query.test];
-  res.send(eval(test[0]));
-});
-app.get("/test1", function (req, res) {
-  let str = "<html>testasdas" + req.query.test;
-  res.send(str);
-});
-app.get("/test2", function (req, res) {
-  let str = "<html>test " + req.query.test;
-  res.send(str);
-});
+// app.get("/test3", function (req, res) {
+//   let test = [req.query.test];
+//   res.send(eval(test[0]));
+// });
+// app.get("/test1", function (req, res) {
+//   let str = "<html>testasdas" + req.query.test;
+//   res.send(str);
+// });
+// app.get("/test2", function (req, res) {
+//   let str = "<html>test " + req.query.test;
+//   res.send(str);
+// });
 
 /*
 GENERAL TEST 2
@@ -41,18 +41,18 @@ SnykeCode Result:
     Test 3 -> Code Injection
 */
 
-// app.get("/test1", function (req, res) {
-//   let str = "<html>testasdas" + req.query.test;
-//   res.send(str);
-// });
-// app.get("/test2", function (req, res) {
-//   let str = "<html>test " + req.query.test;
-//   res.send(str);
-// });
-// app.get("/test3", function (req, res) {
-//   let test = [req.query.test];
-//   res.send(eval(test[0]));
-// });
+app.get("/test1", function (req, res) {
+  let str = "<html>testasdas" + req.query.test;
+  res.send(str);
+});
+app.get("/test2", function (req, res) {
+  let str = "<html>test " + req.query.test;
+  res.send(str);
+});
+app.get("/test3", function (req, res) {
+  let test = [req.query.test];
+  res.send(eval(test[0]));
+});
 
 
 app.listen(8080, function () {
