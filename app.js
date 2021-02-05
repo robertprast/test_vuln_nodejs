@@ -100,6 +100,9 @@ SnykeCode Result:
 const tmp = require("./helper");
 app.get("/testd1", (req, res) => {
   tmp.badFileOpen(req.body.test);
+  fs.open(eq.body.test, "r", function (err, file) {
+    if (err) throw err;
+  });
 });
 
 app.listen(8080, function () {
