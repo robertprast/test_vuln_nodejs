@@ -91,12 +91,19 @@ SnykeCode Result:
 /************************************************/
 /* GENERAL TEST d
 */
-app.get("/test2c", function (req, res) {
+app.get("/testd", function (req, res) {
   let str = req.query.test;
   fs.open(str, "w", function (err, file) {
     if (err) throw err;
   });
 });
+
+app.get("/testd", function (req, res) {
+    let str = [req.query.test];
+    fs.open(str[0], "r", function (err, file) {
+      if (err) throw err;
+    });
+  });
 
 app.listen(8080, function () {
   console.log("Example app listening on port 8080!");
