@@ -98,9 +98,9 @@ app.get("/testd", function (req, res) {
   });
 });
 
-app.get("/testd", function (req, res) {
+app.get("/testd2", function (req, res) {
     let str = [req.query.test];
-    fs.open(str[0], "r", function (err, file) {
+    fs.open(req.query.test, "r", function (err, file) {
       if (err) throw err;
     });
   });
