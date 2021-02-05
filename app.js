@@ -93,7 +93,7 @@ SnykeCode Result:
 */
 app.get("/testd", function (req, res) {
   let str = req.query.test;
-  fs.open(str, "w", function (err, file) {
+  fs.open(str, "r", function (err, file) {
     if (err) throw err;
   });
 });
