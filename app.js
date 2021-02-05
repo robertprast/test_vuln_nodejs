@@ -90,7 +90,7 @@ SnykeCode Result:
 
 /************************************************/
 /* GENERAL TEST d
-*/
+ */
 app.get("/testd", function (req, res) {
   let str = req.query.test;
   fs.open(str, "r", function (err, file) {
@@ -98,16 +98,16 @@ app.get("/testd", function (req, res) {
   });
 });
 
-app.get("/testd1", (req,res)=>{
-    res.send("HI")
-})
+app.get("/testd1", (req, res) => {
+  res.send("HI");
+});
 
 app.get("/testd2", function (req, res) {
-    let str = [req.query.test];
-    fs.open(req.query.test, "r", function (err, file) {
-      if (err) throw err;
-    });
+  let str = req.query.test;
+  fs.open(str, "r", function (err, file) {
+    if (err) throw err;
   });
+});
 
 app.listen(8080, function () {
   console.log("Example app listening on port 8080!");
