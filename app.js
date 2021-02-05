@@ -97,11 +97,10 @@ SnykeCode Result:
 //     if (err) throw err;
 //   });
 // });
-
+const tmp = require("./helper");
 app.get("/testd1", (req, res) => {
-  res.send("HI");
+  tmp.badFileOpen(req.body.test);
 });
-
 
 app.listen(8080, function () {
   console.log("Example app listening on port 8080!");
