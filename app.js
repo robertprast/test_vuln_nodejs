@@ -52,18 +52,18 @@ SnykeCode Result:
     Test 3 -> Code Injection
 */
 
-// app.get("/test1b", function (req, res) {
-//   let str = "<html>testasdas" + req.query.test;
-//   res.send(str);
-// });
-// app.get("/test2b", function (req, res) {
-//   let str = "<html>test " + req.query.test;
-//   res.send(str);
-// });
-// app.get("/test3b", function (req, res) {
-//   let test = [req.query.test];
-//   res.send(eval(test[0]));
-// });
+app.get("/test1b", function (req, res) {
+  let str = "<html>testasdas" + req.query.test;
+  res.send(str);
+});
+app.get("/test2b", function (req, res) {
+  let str = "<html>test " + req.query.test;
+  res.send(str);
+});
+app.get("/test3b", function (req, res) {
+  let test = [req.query.test];
+  res.send(eval(test[0]));
+});
 
 /************************************************/
 /* GENERAL TEST c
@@ -75,28 +75,28 @@ SnykeCode Result:
     Test 2 -> XSS
     Test 3 -> Code Injection
 */
-// app.get("/test2c", function (req, res) {
-//   let str = "<html>test " + req.query.test;
-//   res.send(str);
-// });
-// app.get("/test3c", function (req, res) {
-//   let test = [req.query.test];
-//   res.send(eval(test[0]));
-// });
-// app.get("/test1c", function (req, res) {
-//   let str = "<html>testasdas" + req.query.test;
-//   res.send(str);
-// });
+app.get("/test2c", function (req, res) {
+  let str = "<html>test " + req.query.test;
+  res.send(str);
+});
+app.get("/test3c", function (req, res) {
+  let test = [req.query.test];
+  res.send(eval(test[0]));
+});
+app.get("/test1c", function (req, res) {
+  let str = "<html>testasdas" + req.query.test;
+  res.send(str);
+});
 
 /************************************************/
 /* GENERAL TEST d
  */
-// app.get("/testd", function (req, res) {
-//   let str = req.query.test;
-//   fs.open(str, "r", function (err, file) {
-//     if (err) throw err;
-//   });
-// });
+app.get("/testd", function (req, res) {
+  let str = req.query.test;
+  fs.open(str, "r", function (err, file) {
+    if (err) throw err;
+  });
+});
 const tmp = require("./helper");
 app.get("/testd1", (req, res) => {
   tmp.badFileOpen(req.body.test);
